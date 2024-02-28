@@ -149,6 +149,200 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/24/2024-02-24-python-grammar-toolbook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="S.Wang">
+      <meta itemprop="description" content="Most of my own theoritical study or projects contained.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Runner21st's research field">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/24/2024-02-24-python-grammar-toolbook/" class="post-title-link" itemprop="url">python grammar toolbook</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-24 11:03:39" itemprop="dateCreated datePublished" datetime="2024-02-24T11:03:39+08:00">2024-02-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-28 17:49:52" itemprop="dateModified" datetime="2024-02-28T17:49:52+08:00">2024-02-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Some-useful-grammars-in-Python"><a href="#Some-useful-grammars-in-Python" class="headerlink" title="Some useful grammars in Python"></a>Some useful grammars in Python</h3><h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a,b=<span class="built_in">input</span>().split()</span><br><span class="line"><span class="built_in">print</span>(a,b) </span><br><span class="line"><span class="comment">## way 2</span></span><br><span class="line">s=<span class="built_in">input</span>().split()</span><br><span class="line">a,b=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>,s))</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
+
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224095825541.png" alt="image-20240224095825541"></p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224104855878.png" alt="image-20240224104855878"></p>
+<p><strong>List</strong> <strong>slice</strong>:</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224105303773.png" alt="image-20240224105303773"></p>
+<p><strong>Copy</strong>:</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224105731333.png" alt="image-20240224105731333"></p>
+<h4 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h4><p>Elements in tuples cannot be altered,while it could be switched into list to do so.</p>
+<p>Inner functions are mostly the same between the two data structures.</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224111238019.png" alt="image-20240224111238019"></p>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113213331.png" alt="image-20240224113213331"></p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113501087.png" alt="image-20240224113501087"></p>
+<h4 id="Judge-functions-Inner"><a href="#Judge-functions-Inner" class="headerlink" title="Judge functions(Inner):"></a>Judge functions(Inner):</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113532965.png" alt="image-20240224113532965"></p>
+<p>Transformer:</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113647852.png" alt="image-20240224113647852"></p>
+<p>查找类方法：</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240228172607722.png" alt="image-20240228172607722"></p>
+<p>From string to list:</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224130951659.png" alt="image-20240224130951659"></p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224131441588.png" alt="image-20240224131441588"></p>
+<p>当t转换为list类型之后，可以利用str.join(t)将序列的每个元素用str连接起来</p>
+<h4 id="Format格式化"><a href="#Format格式化" class="headerlink" title="Format格式化"></a>Format格式化</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240228172156115.png" alt="image-20240228172156115"></p>
+<p>同时也可以先用实际意义的变量名作为占位符，随后format实际上是一个后赋值的操作</p>
+<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240228172400739.png" alt="image-20240228172400739"></p>
+<h4 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h4>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/19/2024-02-15-Maximum-Vertex-Weight-k-plex-problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="S.Wang">
+      <meta itemprop="description" content="Most of my own theoritical study or projects contained.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Runner21st's research field">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/19/2024-02-15-Maximum-Vertex-Weight-k-plex-problem/" class="post-title-link" itemprop="url">Maximum Vertex Weight k-plex problem</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-19 16:16:38" itemprop="dateCreated datePublished" datetime="2024-02-19T16:16:38+08:00">2024-02-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-25 19:30:38" itemprop="dateModified" datetime="2024-02-25T19:30:38+08:00">2024-02-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/My-researches/" itemprop="url" rel="index"><span itemprop="name">My researches</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Up-to-now-SOTA"><a href="#Up-to-now-SOTA" class="headerlink" title="Up-to-now SOTA"></a>Up-to-now SOTA</h3><h4 id="Papers"><a href="#Papers" class="headerlink" title="Papers"></a>Papers</h4><p>Maximum weight relaxed cliques and Russian Doll Search revisited</p>
+<p>by Timo Gschwind and so on</p>
+<p>THEORY AND ALGORITHMS FOR COMMUNITY DETECTION AND CLUSTERING IN NETWORKS</p>
+<p>by EUGENE LYKHOVYD</p>
+<h4 id="Some-remarks-and-Notations"><a href="#Some-remarks-and-Notations" class="headerlink" title="Some remarks and Notations"></a>Some remarks and Notations</h4><p>k-plex is also called s-plex</p>
+<h4 id="Notes-I"><a href="#Notes-I" class="headerlink" title="Notes I"></a>Notes I</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240222103226672.png" alt="image-20240222103226672"></p>
+<p>1.LB的寻找：</p>
+<p>为了找到一个合适的紧的下界，可以采用启发式搜索，比如找到前20个最大kplex，就可以剪得很快</p>
+<p>2.UB的寻找：</p>
+<p>可以采用退化序的方式，size乘最大的权重（比如200）也可以进行robust UB</p>
+<p>3.Step 4, verification那里，可以先行判断它的度数有没有大于p-k，不然就直接不允许加入</p>
+<p>4.两个Prune需要继续优化</p>
+<p>5.缩图 函数</p>
+<p>Search函数：</p>
+<p>LB：在heuristic searching里面做完，主要是实现将单个点（+neighbors’ weights）的权重进行贪心，随后找出十个最大的kplex，如果权重相同的情况下，找度数最大的点加入kplex中，之后传回LB</p>
+<p>UB：直接将degen的值乘200即可</p>
+<p>暂时先不用core truss和peeling，做完第一版之后再改</p>
+<p>看看有没有什么好的方式进行shrink graph</p>
+<p>复现findmax，将verification搬过来，实现一下主算法</p>
+<p>本身使用toBin就会更快</p>
+<p>看看后面能不能再加上并行</p>
+<p>Wang Zhengren的代码：</p>
+<p>pstart 点的邻接表，点i在edge数组中的起始位置<br>degree[i]&#x3D;pstart[i+1]-pstart[i]<br>sort(buff,buff+degree[i])对邻居节点进行排序<br>epairs[j]:first,second<br>edges[j]:记录为邻接节点的index值</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/19/Some%20of%20my%20former%20works/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -174,7 +368,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-02-19 16:16:26 / 修改时间：16:30:07" itemprop="dateCreated datePublished" datetime="2024-02-19T16:16:26+08:00">2024-02-19</time>
+              <time title="创建时间：2024-02-19 16:16:26 / 修改时间：16:34:31" itemprop="dateCreated datePublished" datetime="2024-02-19T16:16:26+08:00">2024-02-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -197,7 +391,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="Some-of-my-former-works"><a href="#Some-of-my-former-works" class="headerlink" title="Some of my former works"></a>Some of my former works</h3><p>I’ve down some projects during my last three undergraduate semesters.</p>
+          <h3 id="Some-of-my-former-works"><a href="#Some-of-my-former-works" class="headerlink" title="Some of my former works"></a>Some of my former works</h3><p>I’ve done some projects during my last three undergraduate semesters.</p>
 <p>The projects are mainly about:</p>
 <p>Database: <a target="_blank" rel="noopener" href="https://github.com/SIRBabbage/Database-SQL-base">SIRBabbage&#x2F;Database-SQL-base⁤ (github.com)</a></p>
 <p>C &amp;&amp; Data structure &amp;&amp; Algorithms: <a target="_blank" rel="noopener" href="https://github.com/SIRBabbage/c2022-challenge/tree/main/%E5%AE%9E%E9%AA%8C">c2022-challenge&#x2F;实验 at main · SIRBabbage&#x2F;c2022-challenge (github.com)</a></p>
@@ -432,13 +626,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
