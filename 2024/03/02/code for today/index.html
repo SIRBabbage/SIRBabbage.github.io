@@ -20,31 +20,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Most of my own theoritical study or projects contained.">
-<meta property="og:type" content="website">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637void Graph::oriented_triangle_counting(ui n, ui m, ui *peel_sequence, ept *pstart, ept *pend, ui *edges, ui *tri_cnt, ui *adj) &#123;	u">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Runner21st&#39;s research field">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2024/03/02/code%20for%20today/index.html">
 <meta property="og:site_name" content="Runner21st&#39;s research field">
-<meta property="og:description" content="Most of my own theoritical study or projects contained.">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637void Graph::oriented_triangle_counting(ui n, ui m, ui *peel_sequence, ept *pstart, ept *pend, ui *edges, ui *tri_cnt, ui *adj) &#123;	u">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-02T09:50:24.371Z">
+<meta property="article:modified_time" content="2024-03-02T09:50:24.641Z">
 <meta property="article:author" content="S.Wang">
 <meta property="article:tag" content="Computer science">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2024/03/02/code%20for%20today/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Runner21st's research field</title>
+  <title> | Runner21st's research field</title>
   
 
 
@@ -143,9 +145,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -161,10 +164,9 @@
       <meta itemprop="name" content="Runner21st's research field">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2024/03/02/code%20for%20today/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -187,347 +189,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Graph::oriented_triangle_counting</span><span class="params">(ui n, ui m, ui *peel_sequence, ept *pstart, ept *pend, ui *edges, ui *tri_cnt, ui *adj)</span> </span>&#123;</span><br><span class="line">	ui *rid = adj;<span class="comment">//存储等待处理的顶点</span></span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) rid[peel_sequence[i]] = i;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		ept &amp;end = pend[i] = pstart[i];</span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[i];j &lt; pstart[i+<span class="number">1</span>];j ++) <span class="keyword">if</span>(rid[edges[j]] &gt; rid[i]) edges[end ++] = edges[j];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> NDEBUG</span></span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i ++) sum += pend[i] - pstart[i];</span><br><span class="line">	<span class="comment">// printf(&quot;%lld %lld\n&quot;, sum, m);</span></span><br><span class="line">	<span class="built_in">assert</span>(sum*<span class="number">2</span> == m);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(adj, <span class="number">0</span>, <span class="built_in">sizeof</span>(ui)*n);</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">memset</span>(tri_cnt, <span class="number">0</span>, <span class="built_in">sizeof</span>(ui)*m);</span><br><span class="line">	<span class="keyword">for</span>(ui u = <span class="number">0</span>;u &lt; n;u ++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[u];j &lt; pend[u];j ++) adj[edges[j]] = j+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[u];j &lt; pend[u];j ++) &#123;</span><br><span class="line">			ui v = edges[j];</span><br><span class="line">			<span class="keyword">for</span>(ept k = pstart[v];k &lt; pend[v];k ++) <span class="keyword">if</span>(adj[edges[k]]) &#123;</span><br><span class="line">				++ tri_cnt[j];</span><br><span class="line">				++ tri_cnt[k];</span><br><span class="line">				++ tri_cnt[adj[edges[k]]<span class="number">-1</span>];</span><br><span class="line">				++ cnt;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[u];j &lt; pend[u];j ++) adj[edges[j]] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> NDEBUG</span></span><br><span class="line">	<span class="comment">//printf(&quot;*** Total number of triangles: %s\n&quot;, Utility::integer_to_string(cnt).c_str());</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Graph::oriented_triangle_counting</span><span class="params">(ui n, ui m, ui *peel_sequence, ept *pstart, ept *pend, ui *edges, ui *tri_cnt, ui *adj)</span> </span>&#123;</span><br><span class="line">	ui *rid = adj;<span class="comment">//存储等待处理的顶点</span></span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) rid[peel_sequence[i]] = i;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		ept &amp;end = pend[i] = pstart[i];</span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[i];j &lt; pstart[i+<span class="number">1</span>];j ++) <span class="keyword">if</span>(rid[edges[j]] &gt; rid[i]) edges[end ++] = edges[j];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> NDEBUG</span></span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i ++) sum += pend[i] - pstart[i];</span><br><span class="line">	<span class="comment">// printf(&quot;%lld %lld\n&quot;, sum, m);</span></span><br><span class="line">	<span class="built_in">assert</span>(sum*<span class="number">2</span> == m);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(adj, <span class="number">0</span>, <span class="built_in">sizeof</span>(ui)*n);</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">memset</span>(tri_cnt, <span class="number">0</span>, <span class="built_in">sizeof</span>(ui)*m);</span><br><span class="line">	<span class="keyword">for</span>(ui u = <span class="number">0</span>;u &lt; n;u ++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[u];j &lt; pend[u];j ++) adj[edges[j]] = j+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[u];j &lt; pend[u];j ++) &#123;</span><br><span class="line">			ui v = edges[j];</span><br><span class="line">			<span class="keyword">for</span>(ept k = pstart[v];k &lt; pend[v];k ++) <span class="keyword">if</span>(adj[edges[k]]) &#123;</span><br><span class="line">				++ tri_cnt[j];</span><br><span class="line">				++ tri_cnt[k];</span><br><span class="line">				++ tri_cnt[adj[edges[k]]<span class="number">-1</span>];</span><br><span class="line">				++ cnt;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[u];j &lt; pend[u];j ++) adj[edges[j]] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> NDEBUG</span></span><br><span class="line">	<span class="comment">//printf(&quot;*** Total number of triangles: %s\n&quot;, Utility::integer_to_string(cnt).c_str());</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Graph::reorganize_oriented_graph</span><span class="params">(ui n, ui *tri_cnt, ui *edge_list, ept *pstart, ept *pend, ept *pend2, ui *edges, ui *edgelist_pointer, ui *buf)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) pend2[i] = pend[i];<span class="comment">//copied</span></span><br><span class="line">	ept pos = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(ept j = pstart[i];j &lt; pend[i];j ++) &#123;</span><br><span class="line">			tri_cnt[pos&gt;&gt;<span class="number">1</span>] = edgelist_pointer[j]; edge_list[pos++] = i; edge_list[pos++] = edges[j];</span><br><span class="line"></span><br><span class="line">			ept &amp;k = pend2[edges[j]];</span><br><span class="line">			edgelist_pointer[k] = edgelist_pointer[j] = (pos&gt;&gt;<span class="number">1</span>)<span class="number">-1</span>;</span><br><span class="line">			edges[k ++] = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> NDEBUG</span></span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) <span class="built_in">assert</span>(pend2[i] == pstart[i+<span class="number">1</span>]);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"><span class="comment">//commonly using asserts when debugging</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		pend2[i] = pend[i];</span><br><span class="line">		pend[i] = pstart[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(ept j = pend2[i];j &lt; pstart[i+<span class="number">1</span>];j ++) &#123;</span><br><span class="line">			ept &amp;k = pend[edges[j]];</span><br><span class="line">			edgelist_pointer[k] = edgelist_pointer[j];</span><br><span class="line">			edges[k ++] = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	ept *ids = pend2;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(pend[i] == pstart[i]||pend[i] == pstart[i+<span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">		ept j = pstart[i], k = pend[i], pos = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(j &lt; pend[i]&amp;&amp;k &lt; pstart[i+<span class="number">1</span>]) &#123;</span><br><span class="line">			<span class="keyword">if</span>(edges[j] &lt; edges[k]) &#123;</span><br><span class="line">				ids[pos] = edges[j];</span><br><span class="line">				buf[pos ++] = edgelist_pointer[j ++];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				ids[pos] = edges[k];</span><br><span class="line">				buf[pos ++] = edgelist_pointer[k ++];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(j &lt; pend[i]) &#123;</span><br><span class="line">			ids[pos] = edges[j];</span><br><span class="line">			buf[pos ++] = edgelist_pointer[j ++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(k &lt; pstart[i+<span class="number">1</span>]) &#123;</span><br><span class="line">			ids[pos] = edges[k];</span><br><span class="line">			buf[pos ++] = edgelist_pointer[k ++];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(ept j = <span class="number">0</span>;j &lt; pos;j ++) &#123;</span><br><span class="line">			edges[pstart[i] + j] = ids[j];</span><br><span class="line">			edgelist_pointer[pstart[i] + j] = buf[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Graph::search</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Timer t;</span><br><span class="line">	kplex.<span class="built_in">resize</span>(<span class="number">2</span>*K<span class="number">-2</span>); <span class="comment">//screen out trivial cases which are unconnected kplexes(Xiao)</span></span><br><span class="line">	<span class="type">int</span> max_degree=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(pstart[i+<span class="number">1</span>]-pstart[i] &gt; max_degree) max_degree = pstart[i+<span class="number">1</span>]-pstart[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	ui LB = <span class="built_in">heuristic_kplex_max_weight</span>(<span class="number">10</span>);</span><br><span class="line">	<span class="comment">//first finding,need to be changed(new heuristic way)</span></span><br><span class="line">	<span class="comment">//The best solution found so far  (Lower Bound)</span></span><br><span class="line"></span><br><span class="line">	ui oldn = n;</span><br><span class="line">	ui *seq = <span class="keyword">new</span> ui[n];</span><br><span class="line">	ui *core = <span class="keyword">new</span> ui[n];</span><br><span class="line">	ui *degree = <span class="keyword">new</span> ui[n];</span><br><span class="line">	<span class="type">char</span> *vis = <span class="keyword">new</span> <span class="type">char</span>[n];</span><br><span class="line"></span><br><span class="line">	ListLinearHeap *heap = <span class="keyword">new</span> <span class="built_in">ListLinearHeap</span>(n, n<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	ui UB =  <span class="built_in">degen</span>(n, seq, core, pstart, edges, degree, vis, heap, <span class="literal">true</span>);</span><br><span class="line">	<span class="comment">//Still need a New upper bound for a k-plex ,now is too trivial</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;*** Upper Bound: %lu,Lower Bound:%lu&quot;</span>, UB , LB);</span><br><span class="line">	<span class="keyword">delete</span> heap;</span><br><span class="line">	<span class="keyword">delete</span>[] vis;</span><br><span class="line">	<span class="keyword">delete</span>[] degree;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//main loop to find the max kplex</span></span><br><span class="line">	<span class="keyword">if</span>(kplex.<span class="built_in">size</span>() &lt; UB) &#123;</span><br><span class="line">		ui old_size = kplex.<span class="built_in">size</span>();</span><br><span class="line">		ui *out_mapping = <span class="keyword">new</span> ui[n];</span><br><span class="line">		ui *rid = <span class="keyword">new</span> ui[n];<span class="comment">//携带着满足条件，即shrink以后剩余的节点的vec</span></span><br><span class="line"></span><br><span class="line">		<span class="built_in">shrink_graph</span>(n, m, seq, core, out_mapping, <span class="literal">NULL</span>, rid, pstart, edges, <span class="literal">true</span>);</span><br><span class="line">		<span class="comment">// delete[] core; core = NULL;</span></span><br><span class="line">		<span class="comment">//core已经高阶替代了degree在induced subgraph中的作用</span></span><br><span class="line"></span><br><span class="line">		ui *degree = <span class="keyword">new</span> ui[n];</span><br><span class="line">		<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) degree[i] = pstart[i+<span class="number">1</span>] - pstart[i];</span><br><span class="line">		<span class="comment">//此时pstart已经被更改了，所以重新计算度数</span></span><br><span class="line"></span><br><span class="line">		ListLinearHeap *linear_heap = <span class="keyword">new</span> <span class="built_in">ListLinearHeap</span>(n, n<span class="number">-1</span>);</span><br><span class="line">		linear_heap-&gt;<span class="built_in">init</span>(n, n<span class="number">-1</span>, seq, degree);<span class="comment">//重新维护顶点堆</span></span><br><span class="line"></span><br><span class="line">		<span class="built_in">assert</span>(pend == <span class="literal">nullptr</span>);</span><br><span class="line">		pend = <span class="keyword">new</span> ept[n];</span><br><span class="line"></span><br><span class="line">		ui *edgelist_pointer = <span class="keyword">new</span> ui[m];</span><br><span class="line">		<span class="built_in">oriented_triangle_counting</span>(n, m, seq, pstart, pend, edges, edgelist_pointer, rid); <span class="comment">// edgelist_pointer currently stores triangle_counts</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// delete[] seq; seq = NULL;</span></span><br><span class="line"></span><br><span class="line">		pend_buf = <span class="keyword">new</span> ept[n];</span><br><span class="line">		ui *edge_list = <span class="keyword">new</span> ui[m];</span><br><span class="line">		ui *tri_cnt = <span class="keyword">new</span> ui[m/<span class="number">2</span>];</span><br><span class="line">		<span class="built_in">reorganize_oriented_graph</span>(n, tri_cnt, edge_list, pstart, pend, pend_buf, edges, edgelist_pointer, rid);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; n;i ++) pend[i] = pstart[i+<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">		ui *active_edgelist = <span class="keyword">new</span> ui[m&gt;&gt;<span class="number">1</span>];</span><br><span class="line">		ui active_edgelist_n = m&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; (m&gt;&gt;<span class="number">1</span>);i ++) active_edgelist[i] = i;</span><br><span class="line"></span><br><span class="line">		ui *Qe = <span class="keyword">new</span> ui[m&gt;&gt;<span class="number">1</span>];</span><br><span class="line">		<span class="type">char</span> *deleted = <span class="keyword">new</span> <span class="type">char</span>[m&gt;&gt;<span class="number">1</span>];</span><br><span class="line">		<span class="built_in">memset</span>(deleted, <span class="number">0</span>, <span class="built_in">sizeof</span>(<span class="type">char</span>)*(m&gt;&gt;<span class="number">1</span>));</span><br><span class="line">		<span class="type">char</span> *exists = <span class="keyword">new</span> <span class="type">char</span>[n];</span><br><span class="line">		<span class="built_in">memset</span>(exists, <span class="number">0</span>, <span class="built_in">sizeof</span>(<span class="type">char</span>)*n);</span><br><span class="line"></span><br><span class="line">		ui *Qv = <span class="keyword">new</span> ui[n];</span><br><span class="line">		ui Qv_n = <span class="number">0</span>;</span><br><span class="line">		MSearcher *kplex_solver = <span class="keyword">new</span> <span class="built_in">MSearcher</span>();</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(kplex.<span class="built_in">size</span>() &gt; <span class="number">2</span>*K<span class="number">-2</span> ) &#123;</span><br><span class="line">			m -= <span class="number">2</span>*<span class="built_in">peeling</span>(n, linear_heap, Qv, Qv_n, kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K, Qe, <span class="literal">true</span>, kplex.<span class="built_in">size</span>()+<span class="number">1</span><span class="number">-2</span>*K, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;*** After core-truss co-pruning: n = %s, m = %s, density = %.4lf\n&quot;</span>, Utility::<span class="built_in">integer_to_string</span>(n-Qv_n).<span class="built_in">c_str</span>(), Utility::<span class="built_in">integer_to_string</span>(m/<span class="number">2</span>).<span class="built_in">c_str</span>(), <span class="built_in">double</span>(m)/(n-Qv_n)/(n-Qv_n<span class="number">-1</span>));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Timer tt;</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> max_n = n - Qv_n;</span><br><span class="line">		s_degree = <span class="keyword">new</span> ui[max_n];</span><br><span class="line">		s_pstart = <span class="keyword">new</span> ept[max_n+<span class="number">1</span>];</span><br><span class="line">		s_pend = <span class="keyword">new</span> ept[max_n];</span><br><span class="line">		s_edges = <span class="keyword">new</span> ui[m];</span><br><span class="line">		s_peel_sequence = <span class="keyword">new</span> ui[max_n];</span><br><span class="line">		s_core = <span class="keyword">new</span> ui[max_n];</span><br><span class="line">		s_vis = <span class="keyword">new</span> <span class="type">char</span>[max_n];</span><br><span class="line">		s_heap = <span class="keyword">new</span> <span class="built_in">ListLinearHeap</span>(max_n,max_n<span class="number">-1</span>);</span><br><span class="line">		s_edgelist_pointer = <span class="keyword">new</span> ui[m];</span><br><span class="line">		s_tri_cnt = <span class="keyword">new</span> ui[m/<span class="number">2</span>];</span><br><span class="line">		s_edge_list = <span class="keyword">new</span> ui[m];</span><br><span class="line">		s_active_edgelist = <span class="keyword">new</span> ui[m/<span class="number">2</span>];</span><br><span class="line">		s_deleted = <span class="keyword">new</span> <span class="type">char</span>[m/<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">		vector&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; vp; vp.<span class="built_in">reserve</span>(m/<span class="number">2</span>);</span><br><span class="line">		ui *t_degree = <span class="keyword">new</span> ui[n];</span><br><span class="line"></span><br><span class="line">		ui max_n_prune = <span class="number">0</span>, max_n_search = <span class="number">0</span>, prune_cnt = <span class="number">0</span>, search_cnt = <span class="number">0</span>;</span><br><span class="line">		<span class="type">double</span> min_density_prune = <span class="number">1</span>, min_density_search = <span class="number">1</span>, total_density_prune = <span class="number">0</span>, total_density_search = <span class="number">0</span>;</span><br><span class="line">		ui last_m=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n&amp;&amp;m&amp;&amp;kplex.<span class="built_in">size</span>() &lt; UB;i ++) &#123;</span><br><span class="line">			ui u, key;</span><br><span class="line">			linear_heap-&gt;<span class="built_in">pop_min</span>(u, key);</span><br><span class="line">			<span class="comment">// if(key != 0) printf(&quot;u = %u, key = %u\n&quot;, u, key);</span></span><br><span class="line">			<span class="keyword">if</span>(key &lt; kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K) &#123;</span><br><span class="line">				<span class="keyword">if</span>(degree[u] != <span class="number">0</span>) &#123; <span class="comment">// degree[u] == 0 means u is deleted. it could be the case that degree[u] == 0, but key[u] &gt; 0, as key[u] is not fully updated in linear_heap</span></span><br><span class="line">					Qv[<span class="number">0</span>] = u; Qv_n = <span class="number">1</span>;</span><br><span class="line">					<span class="keyword">if</span>(kplex.<span class="built_in">size</span>()+<span class="number">1</span>&gt;<span class="number">2</span>*K) m -= <span class="number">2</span>*<span class="built_in">peeling</span>(n, linear_heap, Qv, Qv_n, kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K, Qe, <span class="literal">false</span>, kplex.<span class="built_in">size</span>()+<span class="number">1</span><span class="number">-2</span>*K, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span><br><span class="line">					<span class="keyword">else</span> m -= <span class="number">2</span>*<span class="built_in">peeling</span>(n, linear_heap, Qv, Qv_n, kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K, Qe, <span class="literal">false</span>, <span class="number">0</span>, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(m == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">			<span class="built_in">assert</span>(degree[u] == key);</span><br><span class="line"></span><br><span class="line">			ui *ids = Qv;</span><br><span class="line">			ui ids_n = <span class="number">0</span>;</span><br><span class="line">			<span class="type">bool</span> mflag=<span class="literal">false</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>( K&lt;<span class="number">3</span> || max_n==oldn ) kplex_solver-&gt;enableInput=<span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span>( K&gt;=<span class="number">10</span> ) kplex_solver-&gt;enableInput=<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">			<span class="comment">// if(last_m&lt;0.8*m) &#123;</span></span><br><span class="line">			<span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">				ui pre_size;</span><br><span class="line">				<span class="keyword">do</span>&#123;</span><br><span class="line">					pre_size=kplex.<span class="built_in">size</span>();</span><br><span class="line">					<span class="built_in">extract_subgraph_and_prune</span>(u, ids, ids_n, rid, vp, Qe, t_degree, exists, pend, deleted, edgelist_pointer);</span><br><span class="line">					<span class="keyword">if</span>(ids_n) &#123;</span><br><span class="line">						<span class="type">double</span> density = (<span class="built_in">double</span>(vp.<span class="built_in">size</span>()*<span class="number">2</span>))/ids_n/(ids_n<span class="number">-1</span>);</span><br><span class="line">						total_density_prune += density; ++ prune_cnt;</span><br><span class="line">						<span class="keyword">if</span>(density &lt; min_density_prune) min_density_prune = density;</span><br><span class="line">						<span class="keyword">if</span>(ids_n &gt; max_n_prune) max_n_prune = ids_n;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(ids_n &gt; kplex.<span class="built_in">size</span>()&amp;&amp;vp.<span class="built_in">size</span>()*<span class="number">2</span> &lt; m) <span class="built_in">subgraph_prune</span>(ids, ids_n, vp, rid, Qv, Qe, exists);</span><br><span class="line">					<span class="comment">// Qv_n=0;</span></span><br><span class="line">					<span class="comment">// if(kplex.size() != pre_size &amp;&amp; kplex.size()&gt; 2*K-2) m -= 2*peeling(n, linear_heap, Qv, Qv_n, kplex.size()+1-K, Qe, true, kplex.size()+1-2*K, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">while</span>(kplex.<span class="built_in">size</span>()!=pre_size);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="built_in">extract_graph</span>(n, m, degree, ids, ids_n, rid, vp, exists, pstart, pend, edges, deleted, edgelist_pointer);</span><br><span class="line">				<span class="type">double</span> density = (<span class="built_in">double</span>(vp.<span class="built_in">size</span>()*<span class="number">2</span>))/ids_n/(ids_n<span class="number">-1</span>);</span><br><span class="line">				total_density_prune += density; ++ prune_cnt;</span><br><span class="line">				<span class="keyword">if</span>(density &lt; min_density_prune) min_density_prune = density;</span><br><span class="line">				<span class="keyword">if</span>(ids_n &gt; max_n_prune) max_n_prune = ids_n;</span><br><span class="line">				mflag=<span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			last_m=vp.<span class="built_in">size</span>()*<span class="number">2</span>;</span><br><span class="line">			ui pre_size = kplex.<span class="built_in">size</span>();</span><br><span class="line">			<span class="keyword">if</span>(ids_n &gt; kplex.<span class="built_in">size</span>()) &#123;</span><br><span class="line">				<span class="type">double</span> density = (<span class="built_in">double</span>(vp.<span class="built_in">size</span>()*<span class="number">2</span>))/ids_n/(ids_n<span class="number">-1</span>);</span><br><span class="line">				total_density_search += density; ++ search_cnt;</span><br><span class="line">				<span class="keyword">if</span>(density &lt; min_density_search) min_density_search = density;</span><br><span class="line">				<span class="keyword">if</span>(ids_n &gt; max_n_search) max_n_search = ids_n;</span><br><span class="line">				kplex_solver-&gt;<span class="built_in">load</span>(ids_n, vp);</span><br><span class="line">				<span class="keyword">if</span>(mflag)&#123;</span><br><span class="line">					kplex_solver-&gt;<span class="built_in">runWHOLE</span>(K, kplex);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> kplex_solver-&gt;<span class="built_in">run</span>(K, kplex);</span><br><span class="line">			&#125;</span><br><span class="line">			Qv[<span class="number">0</span>] = u; Qv_n = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(kplex.<span class="built_in">size</span>() != pre_size &amp;&amp; kplex.<span class="built_in">size</span>()&gt; <span class="number">2</span>*K<span class="number">-2</span>) &#123;</span><br><span class="line">				<span class="keyword">for</span>(ui j = <span class="number">0</span>;j &lt; kplex.<span class="built_in">size</span>();j ++) kplex[j] = ids[kplex[j]];</span><br><span class="line">				m -= <span class="number">2</span>*<span class="built_in">peeling</span>(n, linear_heap, Qv, Qv_n, kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K, Qe, <span class="literal">true</span>, kplex.<span class="built_in">size</span>()+<span class="number">1</span><span class="number">-2</span>*K, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(kplex.<span class="built_in">size</span>()&gt;<span class="number">2</span>*K<span class="number">-2</span>) m -= <span class="number">2</span>*<span class="built_in">peeling</span>(n, linear_heap, Qv, Qv_n, kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K, Qe, <span class="literal">false</span>, kplex.<span class="built_in">size</span>()+<span class="number">1</span><span class="number">-2</span>*K, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span><br><span class="line">			<span class="keyword">else</span> m -= <span class="number">2</span>*<span class="built_in">peeling</span>(n, linear_heap, Qv, Qv_n, kplex.<span class="built_in">size</span>()+<span class="number">1</span>-K, Qe, <span class="literal">false</span>, <span class="number">0</span>, tri_cnt, active_edgelist, active_edgelist_n, edge_list, edgelist_pointer, deleted, degree, pstart, pend, edges, exists);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(prune_cnt == <span class="number">0</span>) ++ prune_cnt;</span><br><span class="line">		<span class="keyword">if</span>(search_cnt == <span class="number">0</span>) ++ search_cnt;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;prune_cnt: %u, max_n: %u, min_density: %.4lf, avg_density: %.4lf\n&quot;</span>, prune_cnt, max_n_prune, min_density_prune, total_density_prune/prune_cnt);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;search_cnt: %u, max_n: %u, min_density: %.4lf, avg_density: %.4lf\n&quot;</span>, search_cnt, max_n_search, min_density_search, total_density_search/search_cnt);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*** Search time: %s \n&quot;</span>, Utility::<span class="built_in">integer_to_string</span>(tt.<span class="built_in">elapsed</span>()).<span class="built_in">c_str</span>());</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(kplex.<span class="built_in">size</span>() &gt; old_size) &#123;</span><br><span class="line">			<span class="keyword">for</span>(ui i = <span class="number">0</span>;i &lt; kplex.<span class="built_in">size</span>();i ++) &#123;</span><br><span class="line">				kplex[i] = out_mapping[kplex[i]];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">delete</span> kplex_solver;</span><br><span class="line">		<span class="keyword">delete</span> linear_heap;</span><br><span class="line">		<span class="keyword">delete</span>[] t_degree;</span><br><span class="line">		<span class="keyword">delete</span>[] exists;</span><br><span class="line">		<span class="keyword">delete</span>[] out_mapping;</span><br><span class="line">		<span class="keyword">delete</span>[] rid;</span><br><span class="line">		<span class="keyword">delete</span>[] degree;</span><br><span class="line">		<span class="keyword">delete</span>[] edgelist_pointer;</span><br><span class="line">		<span class="keyword">delete</span>[] tri_cnt;</span><br><span class="line">		<span class="keyword">delete</span>[] active_edgelist;</span><br><span class="line">		<span class="keyword">delete</span>[] Qe;</span><br><span class="line">		<span class="keyword">delete</span>[] Qv;</span><br><span class="line">		<span class="keyword">delete</span>[] deleted;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[] core;</span><br><span class="line">	<span class="keyword">delete</span>[] seq;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\tMaximum kPlex Size: %lu, Total Time: %s (microseconds)\n&quot;</span>, kplex.<span class="built_in">size</span>(), Utility::<span class="built_in">integer_to_string</span>(t.<span class="built_in">elapsed</span>()).<span class="built_in">c_str</span>());</span><br><span class="line">	<span class="comment">// printf(&quot;*** Node count: %lld\n&quot;,nodeCnt);</span></span><br><span class="line">	<span class="comment">// printf(&quot;*** Gamma avg: %.4lf\n&quot;,(edgeCnt+0.1)/(nodeCnt+0.1));</span></span><br><span class="line">	<span class="comment">// printf(&quot;*** Sub avg: %.4lf\n&quot;,(subSum+0.1)/(subCnt+0.1));</span></span><br><span class="line">	<span class="comment">// printf(&quot;*** Sub max: %lld\n&quot;,subMax);</span></span><br><span class="line">	<span class="comment">// printf(&quot;*** Max degree: %d\n&quot;,max_degree);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/24/2024-02-24-python-grammar-toolbook/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="S.Wang">
-      <meta itemprop="description" content="Most of my own theoritical study or projects contained.">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Runner21st's research field">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/02/24/2024-02-24-python-grammar-toolbook/" class="post-title-link" itemprop="url">python grammar toolbook</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-02-24 11:03:39" itemprop="dateCreated datePublished" datetime="2024-02-24T11:03:39+08:00">2024-02-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-02-28 17:49:52" itemprop="dateModified" datetime="2024-02-28T17:49:52+08:00">2024-02-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Some-useful-grammars-in-Python"><a href="#Some-useful-grammars-in-Python" class="headerlink" title="Some useful grammars in Python"></a>Some useful grammars in Python</h3><h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a,b=<span class="built_in">input</span>().split()</span><br><span class="line"><span class="built_in">print</span>(a,b) </span><br><span class="line"><span class="comment">## way 2</span></span><br><span class="line">s=<span class="built_in">input</span>().split()</span><br><span class="line">a,b=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>,s))</span><br><span class="line"><span class="built_in">print</span>(a,b)</span><br></pre></td></tr></table></figure>
-
-<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224095825541.png" alt="image-20240224095825541"></p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224104855878.png" alt="image-20240224104855878"></p>
-<p><strong>List</strong> <strong>slice</strong>:</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224105303773.png" alt="image-20240224105303773"></p>
-<p><strong>Copy</strong>:</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224105731333.png" alt="image-20240224105731333"></p>
-<h4 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h4><p>Elements in tuples cannot be altered,while it could be switched into list to do so.</p>
-<p>Inner functions are mostly the same between the two data structures.</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224111238019.png" alt="image-20240224111238019"></p>
-<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113213331.png" alt="image-20240224113213331"></p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113501087.png" alt="image-20240224113501087"></p>
-<h4 id="Judge-functions-Inner"><a href="#Judge-functions-Inner" class="headerlink" title="Judge functions(Inner):"></a>Judge functions(Inner):</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113532965.png" alt="image-20240224113532965"></p>
-<p>Transformer:</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224113647852.png" alt="image-20240224113647852"></p>
-<p>查找类方法：</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240228172607722.png" alt="image-20240228172607722"></p>
-<p>From string to list:</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224130951659.png" alt="image-20240224130951659"></p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240224131441588.png" alt="image-20240224131441588"></p>
-<p>当t转换为list类型之后，可以利用str.join(t)将序列的每个元素用str连接起来</p>
-<h4 id="Format格式化"><a href="#Format格式化" class="headerlink" title="Format格式化"></a>Format格式化</h4><p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240228172156115.png" alt="image-20240228172156115"></p>
-<p>同时也可以先用实际意义的变量名作为占位符，随后format实际上是一个后赋值的操作</p>
-<p><img src="C:\Users\王硕\AppData\Roaming\Typora\typora-user-images\image-20240228172400739.png" alt="image-20240228172400739"></p>
-<h4 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h4>
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/02/24/2024-02-24-python-grammar-toolbook/" rel="prev" title="python grammar toolbook">
+      <i class="fa fa-chevron-left"></i> python grammar toolbook
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/19/Some%20of%20my%20former%20works/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="S.Wang">
-      <meta itemprop="description" content="Most of my own theoritical study or projects contained.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Runner21st's research field">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/02/19/Some%20of%20my%20former%20works/" class="post-title-link" itemprop="url">Some of my former works</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-02-19 16:16:26 / 修改时间：16:34:31" itemprop="dateCreated datePublished" datetime="2024-02-19T16:16:26+08:00">2024-02-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">-work</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Some-of-my-former-works"><a href="#Some-of-my-former-works" class="headerlink" title="Some of my former works"></a>Some of my former works</h3><p>I’ve done some projects during my last three undergraduate semesters.</p>
-<p>The projects are mainly about:</p>
-<p>Database: <a target="_blank" rel="noopener" href="https://github.com/SIRBabbage/Database-SQL-base">SIRBabbage&#x2F;Database-SQL-base⁤ (github.com)</a></p>
-<p>C &amp;&amp; Data structure &amp;&amp; Algorithms: <a target="_blank" rel="noopener" href="https://github.com/SIRBabbage/c2022-challenge/tree/main/%E5%AE%9E%E9%AA%8C">c2022-challenge&#x2F;实验 at main · SIRBabbage&#x2F;c2022-challenge (github.com)</a></p>
-<p>Block-chain: <a target="_blank" rel="noopener" href="https://github.com/SIRBabbage/Lottery-block-chain">SIRBabbage&#x2F;Lottery-block-chain (github.com)</a></p>
-<p>The languages used above included C,C plus plus,Java,SQL,HTML,JS and Solidity.</p>
-<p>If you are interested,the codes are committed to be downloaded and it would be kind to give your stars.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/13/THIS%20IS%20MY%20FIRST%20BLOG/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="S.Wang">
-      <meta itemprop="description" content="Most of my own theoritical study or projects contained.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Runner21st's research field">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/02/13/THIS%20IS%20MY%20FIRST%20BLOG/" class="post-title-link" itemprop="url">Brief Introduction</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-02-13 20:50:12" itemprop="dateCreated datePublished" datetime="2024-02-13T20:50:12+08:00">2024-02-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-02-15 10:53:20" itemprop="dateModified" datetime="2024-02-15T10:53:20+08:00">2024-02-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Others/" itemprop="url" rel="index"><span itemprop="name">Others</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="THIS-IS-MY-FIRST-BLOG"><a href="#THIS-IS-MY-FIRST-BLOG" class="headerlink" title="THIS IS MY FIRST BLOG"></a>THIS IS MY FIRST BLOG</h3><p>Welcome to Runner21st’s blog.</p>
-<p>My blog is mainly about Maths and Computer Science,now I’m majored in CS at UESTC as an undergraduate.</p>
-<p>And this site is just a temporary place to share my researches or study notes,in order to record my studying path. If some of you get interested in what I’ve learned or shared,please contact me via Github: SIRBabbage.github.io or leave a comment here.</p>
-<p>Now I’m doing researches in Exact Algorithms and Artificial Intelligence.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/12/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="S.Wang">
-      <meta itemprop="description" content="Most of my own theoritical study or projects contained.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Runner21st's research field">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/02/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-02-12 20:48:03" itemprop="dateCreated datePublished" datetime="2024-02-12T20:48:03+08:00">2024-02-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
